@@ -1,0 +1,28 @@
+#include<stdio.h>
+#include<conio.h>
+void main()
+{ int a; clrscr();
+printf("enter year");
+scanf("%d",&a)    ;
+printf("%d",a);
+if(a%100==0)
+  { if (a%400==0)
+   printf("\nleap year");
+   else printf("\nnot leap year");
+   }
+   else {if (a%4==0)
+   printf("\nleap year");
+   else printf("\nnot leap year");}
+
+
+
+
+
+
+
+
+
+
+
+getch();
+}
