@@ -1,0 +1,127 @@
+#include<stdio.h>
+#include<conio.h>
+void main()
+{int year,month,date,md; long int td;
+clrscr();
+printf("enter year\nenter month\nenter date\n");
+scanf("\n%d\t%d\t%d",&year,&month,&date);
+if(month>>12)
+{printf("stupid");
+delay(1000);
+exit(0);}
+if(date>>31)  {
+ printf("stupid");
+ delay(1000);
+ exit(0);}
+if(month==1)
+md=0;
+else if(month==2)
+md=31;
+else if(month==3)
+{ if(year/400==0)
+ md=29+31;
+ else if(year/100==0)
+ md=28+31;
+ else if(year/4==0)
+ md=29+31;
+ else md=28+31;}
+ else if(month==4)
+{if(year/400==0)
+ md=29+31+31;
+ else if(year/100==0)
+ md=28+31+31;
+ else if(year/4==0)
+ md=29+31+31;
+ else md=28+31+31;}
+ else if(month==5)
+{if(year/400==0)
+ md=29+31+31+30;
+ else if(year/100==0)
+ md=28+31+31+30;
+ else if(year/4==0)
+ md=29+31+31+30;
+ else md=28+31+31+30;}
+ else if(month==6)
+{if(year/400==0)
+ md=29+31+31+30+31;
+ else if(year/100==0)
+ md=28+31+31+30+31;
+ else if(year/4==0)
+ md=29+31+31+30+31;
+ else md=28+31+31+30+31;}
+ else if(month==7)
+{if(year/400==0)
+ md=29+31+31+30+31+30;
+ else if(year/100==0)
+ md=28+31+31+30+31+30;
+ else if(year/4==0)
+ md=29+31+31+30+31+30;
+ else md=28+31+31+30+31+30;}
+ else if(month==8)
+{if(year/400==0)
+ md=29+31+31+30+31+30+31;
+ else if(year/100==0)
+ md=28+31+31+30+31+30+31;
+ else if(year/4==0)
+ md=29+31+31+30+31+30+31;
+ else md=28+31+31+30+31+30+31;}
+ else if(month==9)
+{if(year/400==0)
+ md=29+31+31+30+31+30+31+31;
+ else if(year/100==0)
+ md=28+31+31+30+31+30+31+31;
+ else if(year/4==0)
+ md=29+31+31+30+31+30+31+31;
+ else md=28+31+31+30+31+30+31+31;}
+ else if(month==10)
+{if(year/400==0)
+ md=29+31+31+30+31+30+31+31+30;
+ else if(year/100==0)
+ md=28+31+31+30+31+30+31+31+30;
+ else if(year/4==0)
+ md=29+31+31+30+31+30+31+31+30;
+ else md=28+31+31+30+31+30+31+31+30;}
+ else if(month==11)
+{if(year/400==0)
+ md=29+31+31+30+31+30+31+31+30+31;
+ else if(year/100==0)
+ md=28+31+31+30+31+30+31+31+30+31;
+ else if(year/4==0)
+ md=29+31+31+30+31+30+31+31+30+31;
+ else md=28+31+31+30+31+30+31+31+30+31;}
+ else if(month==12)
+{if(year/400==0)
+ md=29+31+31+30+31+30+31+31+30+31+30;
+ else if(year/100==0)
+ md=28+31+31+30+31+30+31+31+30+31+30;
+ else if(year/4==0)
+ md=29+31+31+30+31+30+31+31+30+31+30;
+ else md=28+31+31+30+31+30+31+31+30+31+30;}
+
+  td=(year-1)*365L+(year-1)/4-(year-1)/100+(year-1)/400+md+(date-1);
+  if(td%7==0)
+  printf("today is monday");
+  else if(td%7==1)
+  printf("today is tuesday");
+  else if(td%7==2)
+  printf("today is wednesday");
+  else if(td%7==3)
+  printf("today is thursday");
+  else if(td%7==4)
+  printf("today is friday");
+  else if(td%7==5)
+  printf("today is saturday");
+  else if(td%7==6)
+  printf("today is sunday");
+  printf("\nno. of days - %d",md+date);
+  getch();}
+
+
+
+
+
+
+
+
+
+
